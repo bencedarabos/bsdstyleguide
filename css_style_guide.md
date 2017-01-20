@@ -397,7 +397,6 @@ body {
 - Have a plan for class name naming
 - Don't use ID's #hotdrama
 
-
 ## Nesting in Sass
 - Avoid unnecessary nesting. Just because you can nest, doesn't mean you always should. Consider nesting only if you must scope styles to a parent and if there are multiple elements to be nested.
 - Suggestion: Write pure css and simplify with scss nesting, never follow the markup structure, try to create the simplest selectors possible.
@@ -473,6 +472,21 @@ body {
 ## Extend directive
 
 - @extend should be avoided because it has unintuitive and potentially dangerous behavior, especially when used with nested selectors. Even extending top-level placeholder selectors can cause problems if the order of selectors ends up changing later (e.g. if they are in other files and the order the files are loaded shifts).
+
+## Media Queries
+- To achieve shorter and better readibility, use nested mediaqueries.
+
+```
+#!css
+
+.example {
+  font-size: 12pt;
+  
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+}
+```
 
 ## Shame
 
